@@ -1,4 +1,4 @@
-package dz9;
+package dz10;
 
 public class ApplePhone extends Phone{
 

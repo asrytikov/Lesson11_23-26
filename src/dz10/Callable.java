@@ -1,7 +1,7 @@
-package dz9;
+package dz10;
 
 public interface Callable<T> {
 
-    void receiveCall(T name);
+    void receiveCall(T name) throws NameException;
 
 }

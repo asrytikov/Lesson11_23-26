@@ -1,4 +1,4 @@
-package dz9;
+package dz10;
 
 public abstract class Phone implements Callable<String>, Informable<String>{
 
@@ -7,7 +7,7 @@ public abstract class Phone implements Callable<String>, Informable<String>{
    private double weight;
 
     public Phone() {
-        System.out.println("dz6.Phone is created");
+        System.out.println("Phone is created");
     }
 
     public Phone(String number, String model) {
@@ -45,7 +45,8 @@ public abstract class Phone implements Callable<String>, Informable<String>{
         this.weight = weight;
     }
 
-    public void receiveCall(String name){
+    public void receiveCall(String name) throws NameException{
+        if (name.length()<4) throw new NameException("Длина имени меньше 4 символов");
         System.out.printf("Call %s\n", name);
     }
 
